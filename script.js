@@ -3,7 +3,7 @@ var btn_mousein = document.getElementById('mouseenter');
 var btn_dblclick = document.getElementById('dblclick');
 
 btn_click.addEventListener('click', () => {
-    let countElement = btn_click.querySelector('.badge #click-count');
+    let countElement = document.querySelector('.badge #click-count');
     let count = countElement.innerText;
     count = parseInt(count)+1;
     countElement.innerText = count;
@@ -12,7 +12,7 @@ btn_click.addEventListener('click', () => {
 });
 
 btn_mousein.addEventListener('mouseenter', () => {
-    let countElement1 = btn_mousein.querySelector('.badge #mouse-count');
+    let countElement1 = document.querySelector('.badge #mouse-count');
     let count1 = countElement1.innerText;
     count1 = parseInt(count1)+1;
     countElement1.innerText = count1;
@@ -31,13 +31,13 @@ btn_dblclick.addEventListener('dblclick',() => {
 
 let btn_reset = document.querySelector('#reset');
 btn_reset.addEventListener('click' , () => {
-    let click_count = document.querySelector('#click .badge #click-count');
+    let click_count = document.querySelector('.badge #click-count');
     click_count.innerText = 0; 
     btn_click.style.backgroundColor = 'transparent';
-    let mouse_count = document.querySelector('#mouseenter .badge #mouse-count');
+    let mouse_count = document.querySelector('.badge #mouse-count');
     mouse_count.innerText = 0; 
     btn_mousein.style.backgroundColor = 'transparent';
-    let db_count = document.querySelector('#dblclick .badge #dblclick-count');
+    let db_count = document.querySelector('.badge #dblclick-count');
     db_count.innerText = 0; 
     btn_dblclick.style.backgroundColor = 'transparent'
 });
