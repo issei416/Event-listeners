@@ -21,7 +21,7 @@ btn_mousein.addEventListener('mouseenter', () => {
 });
 
 btn_dblclick.addEventListener('dblclick',() => {
-    let countElement2 = btn_dblclick.querySelector('.badge #dblclick-count');
+    let countElement2 = document.querySelector('.badge #dblclick-count');
     let count2 = countElement2.innerText;
     count2 = parseInt(count2)+1;
     countElement2.innerText = count2;
